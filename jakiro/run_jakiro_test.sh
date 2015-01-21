@@ -3,8 +3,8 @@
 container='jakiro_for_rubick_dev'
 port=5000
 
-if [[ `docker ps` =~ $container ]]; then
-    echo container $container is running
+if [[ `docker ps` =~ /^$container$/ ]]; then
+    echo container /^$container$/ is running
 elif [[ `docker ps -a` =~ $container ]]; then
     sudo docker start $container
 else

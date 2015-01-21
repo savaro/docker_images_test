@@ -5,9 +5,9 @@ image_repo='jakiro_dev_internal'
 image_tag='latest'
 port=81
 
-if [[ `docker ps` =~ $container ]]; then
+if [[ `docker ps` =~ /^$container$/ ]]; then
     echo container $container is running
-elif [[ `docker ps -a` =~ $container ]]; then
+elif [[ `docker ps -a` =~ /^$container$/ ]]; then
     sudo docker start $container
 else
     sudo docker run -d --volumes-from jakiro_dev -p $port:5001 \
