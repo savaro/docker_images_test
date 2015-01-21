@@ -1,0 +1,16 @@
+FROM index.alauda.io/chennanfei/mathilde_env
+
+ADD jakiro_start.sh /jakiro_start.sh
+RUN chmod +x /jakiro_start.sh
+
+ADD jakiro_ci /app
+WORKDIR /app
+
+RUN mkdir /jakiro
+
+RUN python manage.py syncdb
+
+VOLUME /app
+
+EXPOSE 5001
+CMD ["/jakiro_start.sh"]
