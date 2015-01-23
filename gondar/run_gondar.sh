@@ -6,7 +6,7 @@ if [ -z $num ]; then
     num='0'
 fi
 
-container="gondar.$num"
+container="gondar_$num"
 image_repo='gondar'
 image_tag='latest'
 
