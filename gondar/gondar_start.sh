@@ -1,12 +1,9 @@
 #!/bin/bash
 
-sudo wrapdocker &
-sudo sleep 3
+#sudo wrapdocker &
+sudo service docker start
 
-sudo docker -d &
-
-# wait 10 seconds till docker is started
-sudo sleep 10
+sudo sleep 5
 
 sudo docker login --username='' --password='' --email='' index.alauda.io
 
