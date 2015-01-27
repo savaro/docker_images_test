@@ -1,9 +1,0 @@
-FROM index.alauda.io/chennanfei/mathilde_env
-
-ADD jakiro_internal_start.sh /jakiro_internal_start.sh
-RUN chmod +x /jakiro_internal_start.sh
-
-WORKDIR /app
-
-EXPOSE 5001
-CMD ["/jakiro_internal_start.sh"]
