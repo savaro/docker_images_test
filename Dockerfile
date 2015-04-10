@@ -1,3 +1,3 @@
-FROM index.alauda.io/nanfei/parent_image:latest
+FROM ubuntu:14.04
 
 CMD ["bash"]
