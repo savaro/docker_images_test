@@ -2,5 +2,6 @@ FROM ubuntu:14.04
 
 WORKDIR /app
 
-EXPOSE 80
+EXPOSE 8080
+
 CMD ["bash"]
