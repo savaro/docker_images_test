@@ -1,6 +1,6 @@
 FROM ubuntu:14.04
 
-ADD app /app
+ADD . /app
 
 EXPOSE 80
 
