@@ -1,0 +1,5 @@
+<<<<<<< HEAD
+Django==1.7
+=======
+Django==1.7.2
+>>>>>>> update
