@@ -1,3 +1,4 @@
 Django==1.7.1
 django-fsm==2.2.0
+python-ldap==2.4.19
 
