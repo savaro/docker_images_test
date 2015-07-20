@@ -7,4 +7,3 @@ RUN pip install -r /requirements.txt
 
 EXPOSE 8089
 
-CMD ["bash"]
