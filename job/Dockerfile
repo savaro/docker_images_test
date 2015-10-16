@@ -9,8 +9,9 @@ RUN apt-get update && apt-get install -y \
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 
+COPY run.sh .
+RUN chmod +x run.sh
+CMD ["/run.sh"]
 
 WORKDIR /app
 COPY . /app
-
-CMD ["./run.sh"]
