@@ -19,11 +19,26 @@ def register_user():
     }
     response = requests.post(url, json=data, headers=HEADERS)
     print '> Result: status={}, content={}'.format(response.status_code,
-                                                 response.content)
+                                                   response.content)
+
+
+def trigger_build():
+    print '> Going to trigger new build'
+
+    url = API_ENDPOINT + '/builds'
+    data = {
+        "namespace": "chennanfei",
+        "repo_name": "docker_images_test",
+        "tag": "latest"
+    }
+    response = requests.post(url, json=data, headers=HEADERS)
+    print '> Result: status={}, content={}'.format(response.status_code,
+                                                   response.content)
 
 
 def run():
     register_user()
+    trigger_build()
 
 
 run()
