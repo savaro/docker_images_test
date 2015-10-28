@@ -29,7 +29,7 @@ def trigger_build():
     data = {
         "namespace": "chennanfei",
         "repo_name": "docker_images_test",
-        "tag": "latest"
+        "tag": "release"
     }
     response = requests.post(url, json=data, headers=HEADERS)
     print '> Result: status={}, content={}'.format(response.status_code,
