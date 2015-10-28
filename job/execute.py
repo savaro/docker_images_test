@@ -27,9 +27,9 @@ def trigger_build():
 
     url = API_ENDPOINT + '/builds'
     data = {
-        "namespace": "chennanfei",
+        "namespace": "chennanfei222",
         "repo_name": "docker_images_test",
-        "tag": "release"
+        "tag": "latest"
     }
     response = requests.post(url, json=data, headers=HEADERS)
     print '> Result: status={}, content={}'.format(response.status_code,
