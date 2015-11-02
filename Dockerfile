@@ -1,6 +1,6 @@
 FROM ubuntu:14.04
 
-RUN apt-get update && apt-get install -y python-pip python-dev
+RUN apt-get update && apt-get install -y python-pip python-dev zip
 
 COPY requirements.txt .
 RUN pip install -r /requirements.txt
