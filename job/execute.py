@@ -46,6 +46,7 @@ def waiting():
 def run():
     register_user()
     trigger_build()
+    waiting()
 
 
 run()
