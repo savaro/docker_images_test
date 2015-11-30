@@ -1,4 +1,5 @@
 import requests
+import time
 
 
 API_ENDPOINT = 'https://api.alauda.cn/v1'
@@ -35,6 +36,12 @@ def trigger_build():
     print '> Result: status={}, content={}'.format(response.status_code,
                                                    response.content)
 
+def waiting():
+    count = 0
+    while count < 50:
+        count += 1
+        print 'waiting...{}'.format(count)
+        time.sleep(1)
 
 def run():
     register_user()
