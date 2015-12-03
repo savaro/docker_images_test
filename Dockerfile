@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM ubuntu5:14.04
 
 # RUN apt-get update && apt-get install -y python-pip python-dev
 
